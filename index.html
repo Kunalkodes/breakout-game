@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Breakout Game</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
  <style>
   *{
     padding:0;
@@ -29,36 +28,81 @@
      height:30px;
      position: absolute;
      z-index:1;
+     left:500px;
+     bottom:31px;
 }
 
 .bat{
-    background-color:green;
+    background-color:cyan;
     width:200px;
     height:30px;
     border:1px solid white;
     position: absolute;
+    border-radius:10px;
+
     
 }
 
 .hurdle{ 
-    background-color: aqua;
+    background-color:palevioletred;
     border:2px solid white;
     width: 180px;
     height:25px;
     position:absolute;
+    border-radius:10px;
+
 }
 
 .box1{
-  background-color: yellow;
-  margin-top: 500px;
+  position: absolute;
+  height:25px;
   width: 200px;
-  position: relative;
+  bottom:400px;
+  left:250px;
+  background-color: yellowgreen;
+ text-align: center;
+ border-radius:10px;
+
 }
 .box2{
-  background-color: green;
-  width:200px;
-  position: relative;
+  position: absolute;
+  height:25px;
+  width: 200px;
+  bottom:400px;
+  left:500px;
+  background-color: yellowgreen;
+  text-align: center;
+  border-radius:10px;
+
 }
+
+.box1:hover{
+  cursor:pointer;
+  background-color: aquamarine;
+  box-shadow: 5px 5px gray;
+}
+.box2:hover{
+  cursor:pointer;
+  background-color: aquamarine;
+  box-shadow: 5px 5px gray;
+}
+
+.score{
+  background-color: black;
+  color: wheat;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  height:25px;
+  width:1000px;
+  bottom:300px;
+  font-size: 25px;
+  margin:auto;
+  justify-content: space-around;
+  cursor:pointer;
+}
+
+
  </style>
 
 </head>
@@ -68,7 +112,23 @@
     <div id="bat" class="bat"></div>
     
    </div>
+ <div class="score" >
+ <div id="start" onclick="startnew()">Start</div>
+ <div id="play" onclick="gamestart()">Pause</div>
+ <div id="score">Score:0</div>
+ </div>
+
+  
+    <div id="left" class="box1" >
+      Left
+     </div>
+     <div id="right" class="box2" >
+      Right
+     </div>
+
+
+  
    <script src="logic.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
   </body>
 </html>
